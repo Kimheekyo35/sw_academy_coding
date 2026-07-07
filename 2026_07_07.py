@@ -82,3 +82,21 @@ composed_func = lambda x: square(add_three(x))
 # 이렇게 하면 composed_func 한번만 호출한 걸로 볼 수 있음 (유지보수 쉬움)
 print(composed_func(5))
 
+arr = [0,0,0,0,0,0]
+arr = [0]*6
+print(arr)
+
+arr = list(range(5))
+print(arr)
+
+arr_0 = [0 for _ in range(5)]
+print(arr_0)
+
+# 2차원 배열
+arr_2 = [[1,2,3,4,5],[6,7,8,9,10]]
+print(arr_2[1][3]) #9
+arr_2[1][3]=15
+print(arr_2)
+
+arr_list = [[i]*4 for i in range(3)]
+print(arr_list)
