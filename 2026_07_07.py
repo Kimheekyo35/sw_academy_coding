@@ -100,3 +100,38 @@ print(arr_2)
 
 arr_list = [[i]*4 for i in range(3)]
 print(arr_list)
+
+
+# 배열 제어하기
+# 권장 시간 복잡도 - O(NlogN)
+# set()은 리스트, 튜플, {} 로도 set을 만들 수 있음
+
+def solution(num_list):
+    mix_list = list(set(num_list))
+    mix_list.sort(reverse=True)
+    return mix_list
+
+print(solution([2,1,3,3,5]))
+
+
+list_1 = [1,2,3,4]
+print(list(set(list_1)))
+
+def solution(num_list):    
+    new_list = []
+
+    if num_list is None:
+        return None
+    if not isinstance(num_list,list):
+        return None
+    if len(num_list) == 0:
+        return None
+    
+    for i in range(len(num_list)-1):
+        for j in range(i+1,len(num_list)):
+            new_list.append(num_list[i] + num_list[j])
+    
+    return sorted(list(set(new_list)))
+
+print(solution([2,1,3,4,1]))
+print(solution([5,0,2,7]))
